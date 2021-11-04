@@ -1,25 +1,25 @@
-"use strict";
+'use strict';
 
-const path = require("path");
-const isLocal = typeof process.pkg === "undefined";
+const path = require('path');
+const isLocal = typeof process.pkg === 'undefined';
 const basePath = isLocal ? process.cwd() : path.dirname(process.execPath);
-const { MODE } = require(path.join(basePath, "constants/blend_mode.js"));
-const { NETWORK } = require(path.join(basePath, "constants/network.js"));
+const { MODE } = require(path.join(basePath, 'constants/blend_mode.js'));
+const { NETWORK } = require(path.join(basePath, 'constants/network.js'));
 
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "Your Collection";
-const description = "Remember to replace this description";
-const baseUri = "ipfs://NewUriToReplace";
+const namePrefix = 'Playground Collection';
+const description = 'Cryptohub it test bed';
+const baseUri = 'ipfs://NewUriToReplace'; // Once uploaded set this and update metadata
 
 const solanaMetadata = {
-  symbol: "YC",
+  symbol: 'YC',
   seller_fee_basis_points: 1000, // Define how much % you want from secondary market sales 1000 = 10%
-  external_url: "https://www.youtube.com/c/hashlipsnft",
+  external_url: 'https://www.youtube.com/c/hashlipsnft',
   creators: [
     {
-      address: "7fXNuer5sbZtaTEPhtJ5g5gNtuyRoKkvxdjEjEnPN4mC",
+      address: '7fXNuer5sbZtaTEPhtJ5g5gNtuyRoKkvxdjEjEnPN4mC',
       share: 100,
     },
   ],
@@ -30,13 +30,26 @@ const layerConfigurations = [
   {
     growEditionSizeTo: 5,
     layersOrder: [
-      { name: "Background" },
-      { name: "Eyeball" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
+      { name: 'Background' },
+      { name: 'Eyeball' },
+      { name: 'Eye color' },
+      { name: 'Iris' },
+      { name: 'Shine' },
+      { name: 'Bottom lid' },
+      { name: 'Top lid' },
+    ],
+  },
+  {
+    growEditionSizeTo: 7,
+    layersOrder: [
+      { name: 'Background' },
+      { name: 'Eyeball' },
+      { name: 'Eye color' },
+      { name: 'Iris' },
+      { name: 'Shine' },
+      { name: 'Bottom lid' },
+      { name: 'Top lid' },
+      { name: 'Goo' },
     ],
   },
 ];
@@ -59,15 +72,15 @@ const gif = {
 
 const text = {
   only: false,
-  color: "#ffffff",
+  color: '#ffffff',
   size: 20,
   xGap: 40,
   yGap: 40,
-  align: "left",
-  baseline: "top",
-  weight: "regular",
-  family: "Courier",
-  spacer: " => ",
+  align: 'left',
+  baseline: 'top',
+  weight: 'regular',
+  family: 'Courier',
+  spacer: ' => ',
 };
 
 const pixelFormat = {
@@ -76,14 +89,14 @@ const pixelFormat = {
 
 const background = {
   generate: true,
-  brightness: "80%",
+  brightness: '80%',
   static: false,
-  default: "#000000",
+  default: '#000000',
 };
 
 const extraMetadata = {};
 
-const rarityDelimiter = "#";
+const rarityDelimiter = '#';
 
 const uniqueDnaTorrance = 10000;
 
@@ -91,16 +104,16 @@ const preview = {
   thumbPerRow: 5,
   thumbWidth: 50,
   imageRatio: format.height / format.width,
-  imageName: "preview.png",
+  imageName: 'preview.png',
 };
 
 const preview_gif = {
   numberOfImages: 5,
-  order: "ASC", // ASC, DESC, MIXED
+  order: 'ASC', // ASC, DESC, MIXED
   repeat: 0,
   quality: 100,
   delay: 500,
-  imageName: "preview.gif",
+  imageName: 'preview.gif',
 };
 
 module.exports = {
