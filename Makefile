@@ -35,3 +35,7 @@ upd:
 rmb:
 	echo "remove build and all it's contents ..."
 	rm -rf ./build
+
+clean:
+	echo "WARN: deletes anything not checked in or branched. assumes git installed and cleans everything not checked in to reset ..."
+	git clean -fdx

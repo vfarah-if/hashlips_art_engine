@@ -10,7 +10,7 @@ const network = NETWORK.eth;
 
 // General metadata for Ethereum
 const namePrefix = 'Playground Collection';
-const description = 'Cryptohub it test bed';
+const description = 'Cryptohub test bed';
 const baseUri = 'ipfs://NewUriToReplace'; // Once uploaded set this and update metadata
 
 const solanaMetadata = {
@@ -54,9 +54,9 @@ const layerConfigurations = [
   },
 ];
 
-const shuffleLayerConfigurations = false;
+const shuffleLayerConfigurations = true;
 
-const debugLogs = false;
+const debugLogs = true;
 
 const format = {
   width: 512,
